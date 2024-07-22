@@ -1,0 +1,110 @@
+.SidebarContent {
+  grid-area: sidebar;
+  /* background-color: rgb(0, 0, 0); */
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas:
+    "header header"
+    "body body";
+
+  grid-gap: 3em;
+}
+.AboutContent {
+  grid-area: header;
+  background-color: rgb(255, 217, 0);
+  border-radius: 25px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+}
+.OverLappingImage {
+  grid-area: header;
+}
+.overlappingImage {
+  grid-area: main;
+}
+.AboutInfo {
+  grid-area: main;
+}
+.MoreText {
+  grid-area: footer;
+}
+.Objective {
+  grid-area: body;
+  /* background-color: rgb(255, 0, 0);
+    border-radius: 25px; */
+  align-items: center;
+  justify-content: center;
+  border: white solid 1px;
+  border-radius: 12px;
+  
+  justify-content: flex-start;
+  /* padding-left: 50px; */
+  justify-content: center;
+  /* gap: 1em; */
+  /* background-image: url('picture9.jpg');
+    background-size: cover; */
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 2fr;
+  grid-template-areas:
+    "header header header"
+    " main main main"
+    "footer footer footer";
+}
+.LastLogoInfo {
+  grid-area: header;
+}
+.LastAboutInfo {
+  grid-area: main;
+}
+/* .lastFooter {
+  grid-area: footer;
+} */
+.AboutInfo {
+  display: flex;
+  justify-content: center;
+  font-size: small;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-indent: 10px;
+  text-align: justify;
+  letter-spacing: 1px;
+}
+.MoreText {
+  display: flex;
+  justify-content: center;
+  font-size: small;
+  font-weight: bolder;
+}
+.logoDescription {
+  display: flex;
+  justify-content: left;
+  gap: 0.2em;
+  margin: 15px;
+}
+.LastAboutInfo{
+
+    display: flex;
+    justify-content:flex-start;
+    padding: 20px;
+    font-weight: bolder;
+    font-size: xx-large;
+    color: white;
+}
+
+.lastFooter{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

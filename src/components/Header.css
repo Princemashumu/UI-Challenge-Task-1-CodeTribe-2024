@@ -1,0 +1,117 @@
+@media screen and (min-width:800px) {
+    .NavigationBar{
+
+    display:flex;
+    flex-wrap:wrap;
+    }
+}
+
+
+
+.NavigationBar{
+                grid-area: nav;
+                /* background-color: purple; */
+                border-radius: 25px;  
+                
+                display:grid;
+                /* grid-template-rows: 1fr ;  */
+                grid-template-columns: 2fr 3fr 1fr;
+                grid-template-areas: "logo header account";
+                grid-gap: 4em;
+                padding: 1em;
+                text-decoration: none;
+                color: aliceblue;
+                text-decoration: none;
+                
+                
+    
+}
+.p{
+        margin: 0;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        
+}
+.logoDescr{
+        display: flex;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "logo descr"
+                              "logo descr";
+
+        gap:0.2em;
+        color: aliceblue;
+
+}
+
+.Descr{
+        display: flex;
+        /* grid-area: descr; */
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        align-items: center;
+        color: aliceblue;
+        font-style: bold;
+        font-weight: bold;
+
+
+}
+.MenuClass{
+        
+        grid-area: header;
+        /* background-color: rgb(255, 0, 0); */
+        border-radius: 25px;
+        /* text-decoration: none;
+        font-style: none; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "Home About Blog Jobs";
+        /* grid-gap:0.1px; */
+        align-items: center;
+        justify-content: center;
+        grid-gap:1em;
+        font-size: small;
+
+}
+.Home{
+        grid-area: Home;
+
+}
+.About{
+
+        grid-area: About;
+}
+.Blog{
+
+        grid-area: Blog;
+}
+.Jobs{
+
+        grid-area: Jobs;
+}
+.AccountClass{
+
+        grid-area: account;
+        background-color: rgb(215, 250, 234);
+        border-radius: 25px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-areas: "accounT accounT";
+
+}
+
+.button{
+        grid-area:accounT;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        align-items: center;
+        font-style: bold;
+        border-radius: 25px;
+        border: white;
+        height: 40px;
+        background-color:white;
+
+}
+.button:hover{
+                background-color: black;
+                color: white;
+}
