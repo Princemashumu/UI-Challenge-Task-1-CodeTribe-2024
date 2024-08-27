@@ -1,30 +1,22 @@
-import "./Header.css";
+import React from 'react';
+import './Header.css';
+import profile from '../profile.png';
 
-function Header() {
-  return (
+const Header = () => {
+    return (
+        <header className="header">
+            <div className="logo">Medora</div>
+            <nav className="nav">
+                <button onClick={() => window.location.href = '#about'}>About us</button>
+                <button onClick={() => window.location.href = '#furniture'}>Furniture</button>
+                <button onClick={() => window.location.href = '#stores'}>Our Stores</button>
+                <button onClick={() => window.location.href = '#blog'}>Blog</button>
+            </nav>
+            <div className="profile-icon">
+                <img src={profile} alt="Profile" />
+            </div>
+        </header>
+    );
+};
 
-    
-    <div className="NavigationBar">
-      <div className="LogoClass">
-        <div className="logoDescr">
-        <img src="brain_26px.png" alt="logo"></img>
-        <div className="Descr">Minds</div></div>
-        
-      </div>
-      <div className="MenuClass">
-
-                <div className="Home"><div href="#">Home</div></div>
-                <div className="About"><div href="#">Aboout</div></div>
-                <div className="Blog"><div href="#">Blog</div></div>
-                <div className="Jobs"><div href="#">Jobs</div></div>
-
-      </div>
-
-      <div className="AccountClass">
-        <button class="button button1">Your Account</button>
-      </div>
-    </div>
-
-  );
-}
 export default Header;
