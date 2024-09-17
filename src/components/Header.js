@@ -1,22 +1,60 @@
 import React from 'react';
-import './Header.css';
-import profile from '../profile.png';
+import { AppBar, Toolbar, Typography, IconButton, Menu, MenuItem } from '@mui/material';
+import { AccountCircle } from '@mui/icons-material';
 
-const Header = () => {
-    return (
-        <header className="header">
-            <div className="logo">Medora</div>
-            <nav className="nav">
-                <button onClick={() => window.location.href = '#about'}>About us</button>
-                <button onClick={() => window.location.href = '#furniture'}>Furniture</button>
-                <button onClick={() => window.location.href = '#stores'}>Our Stores</button>
-                <button onClick={() => window.location.href = '#blog'}>Blog</button>
-            </nav>
-            <div className="profile-icon">
-                <img src={profile} alt="Profile" />
-            </div>
-        </header>
-    );
-};
+function Header() {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleMenu = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  return (
+    <AppBar 
+      position="fixed" 
+      sx={{ 
+        backgroundColor: 'transparent', 
+        boxShadow: 'none', 
+        color: 'black', 
+        top: 0, 
+        left: 0, 
+        right: 0
+      }}
+    >
+      <Toolbar>
+        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+          Medora
+        </Typography>
+        <div style={{ display: 'flex', gap: '20px' }}>
+          <Typography variant="body1">About Us</Typography>
+          <Typography variant="body1">Furniture</Typography>
+          <Typography variant="body1">Our Stores</Typography>
+          <Typography variant="body1">Blog</Typography>
+        </div>
+        <IconButton
+          size="large"
+          edge="end"
+          color="inherit"
+          onClick={handleMenu}
+        >
+          <AccountCircle />
+        </IconButton>
+        <Menu
+          anchorEl={anchorEl}
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
+        >
+          <MenuItem onClick={handleClose}>Profile</MenuItem>
+          <MenuItem onClick={handleClose}>My Account</MenuItem>
+          <MenuItem onClick={handleClose}>Logout</MenuItem>
+        </Menu>
+      </Toolbar>
+    </AppBar>
+  );
+}
 
 export default Header;

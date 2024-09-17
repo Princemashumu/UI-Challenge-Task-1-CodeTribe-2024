@@ -1,14 +1,14 @@
-import './App.css';
-import Header from './components/Header';
-import MainContent from './components/MainContent';
+import React from 'react';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import MainContent from './components/MainContent'; // Import your MainContent component
+
+const theme = createTheme();
 
 function App() {
   return (
-    <div className="App">
-      <Header></Header>
-      <MainContent></MainContent>
-
-    </div>
+    <ThemeProvider theme={theme}>
+      <MainContent />
+    </ThemeProvider>
   );
 }
 
